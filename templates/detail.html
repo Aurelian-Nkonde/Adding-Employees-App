@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %} Detail | page {% endblock title %}
+
+{% block content %}
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h4 class="text-center pt-4 detailHeader">Employee Detail</h4>
+                    </div> 
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="ibox-content p-4">
+                                <form method="post">{%csrf_token%}
+                                    <div class="form-group row"><label class="col col-form-label">First_Name</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.first_name }}</p></div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row"><label class="col col-form-label">Last_Name</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.last_name }}</p></div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row"><label class="col col-form-label">Email</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.email }}</div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row"><label class="col col-form-label">Phone</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.phone }}</div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row"><label class="col col-form-label">Address</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.address }}</div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group row"><label class="col col-form-label">Gender</label>
+                                        <div class="col"><p class="form-control-static">{{ detail.empl_gender }}</div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

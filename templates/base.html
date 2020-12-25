@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>{% block title %} base {% endblock title %}</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1 class="logo">
+                <a href="{% url 'home' %}" class="logo1">jf_<span class="logo2">cleaners</span></a>
+            </h1>
+        </div>
+        <ul class="nav">
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}" class="btnOut">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}" class="btnIn">login</a></li>
+                <li><a href="{% url 'register' %}" class="btnIn">signup</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    
+    {% block content %}
+    {% endblock content %}  
+
+</body>
+</html>

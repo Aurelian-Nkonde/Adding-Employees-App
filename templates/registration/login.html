@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %} Login page {% endblock title %}
+
+{% block content %}
+<div id="login-container">
+    <div id="leftSide">
+        <p class="loginParagraphy">jF_Workers <span>Employee App</span></p>
+    </div>
+
+    <div id="rightSide">
+        <div class="container">
+            <div class="row mt-3 pt-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="login-title card-title text-center loginHeader">Login here</div>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <input type="submit" value="login" class="btn btn-block btnLogin">
+                            </form>
+                            <hr>
+                            <a href="{% url 'register' %}" class="btn btn-block  btnSignup">Signup</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,305 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+#header{
+    min-height: 10vh;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(6, 84, 82);
+}
+
+.logo{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+
+.logo1{
+    text-decoration: none;
+    color: white;
+}
+
+
+.logo2{
+    color: rgba(227, 162, 11);
+}
+
+.logo1:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav{
+    display: flex;
+}
+
+.btnOut{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: white;
+    background: red;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size:1.2rem;
+    letter-spacing: 1px;
+}
+
+.btnOut:hover{
+    color: white;
+    background: red;
+    text-decoration: none;
+}
+
+.btnIn{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: white;
+    background: orange;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size:1.2rem;
+    letter-spacing: 1px;
+}
+
+.btnIn:hover{
+    color: white;
+    background: orange;
+    text-decoration: none;
+}
+
+
+.nav li{
+    margin-right: 1rem;
+}
+
+#showcasing{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('/static/imgs/one.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.heading{
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+    padding-bottom: 6px;
+}
+
+.paragraphy{
+    font-family: monospace;
+    font-size: 1.3rem;
+    color: white;
+    line-height: 1.7rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.btnLarge{
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: orange;
+    border: 0px;
+    border-radius: 9px;
+    padding: 6px 13px;
+    transition: 0.3s;
+}
+
+.btnLarge:hover{
+    color: orange;
+    background: black;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+#login-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#leftSide{
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.7)), url(/static/imgs/two.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#rightSide{
+    height: 90vh;
+    padding: 20px;
+}
+
+
+.btnLogin{
+    background: green;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+
+.btnSignup{
+    background: orange;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.loginHeader{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+
+.loginParagraphy{
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 2px
+    text-transform: capitalize;
+ 
+}
+
+.signupTitle{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.login-title {
+    text-transform: capitalize;
+    font-family: monospace;
+    font-size: 1.6rem;
+}
+
+#top-nav{
+    min-height: 5vh;
+    background: darkcyan;
+    display: flex;
+    justify-content: space-around;
+}
+
+#adding h1{
+    font-family: monospace;
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 4px;
+}
+
+.dash-title{
+    font-family: monospace;
+    font-size: 2.4rem;
+}
+
+.table-links{
+    text-decoration: none;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: white;
+    font-feature-settings: 1.3rem;
+}
+
+
+.cardcss
+{
+    background: gray;
+}
+
+
+.detailHeader{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+@media(max-width: 700px){
+    .heading{
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        padding-bottom: 4px;
+        text-align: center;
+    }
+    #leftSide{
+        display: none;
+    }
+
+    #login-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+}
+
+
+@media(max-width: 400px){
+    .heading{
+        font-size: 2.3rem;
+        letter-spacing: 1px;
+        padding-bottom: 4px;
+        text-align: center;
+    }
+    .paragraphy{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    .btnLarge{
+        font-size: 1.2rem;
+        padding: 4px 9px;
+    }
+    .logo{
+        font-size: 1.2rem;
+    }
+}

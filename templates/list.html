@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %} Dashbord | page {% endblock title %}
+
+{% block content %}
+<div id="top-nav">
+    <div></div>
+    <div id="adding">
+        <h4><a href="{% url 'create' %}" class="btn bg-warning mt-2">+Add</a></h4>
+    </div>
+</div>
+
+<div id="dashboard-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 pt-4">
+                <h1 class="dash-title text-center pt-3">List of Employees</h1>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in list %}
+                        <tr>
+                            <td>{{user.first_name}}</td>
+                            <td>{{user.last_name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.empl_gender}}</td>
+                            <td><a href="{% url 'detail' user.id %}" class="table-links">Details</a></td>
+                            <td><a href="{% url 'delete' user.id %}" class="table-links">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
