@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 chardet==3.0.4
 cliapp==1.20170827
 cmdtest==0.32
-cryptography==3.2
+cryptography==3.3.2
 enum34==1.1.6
 idna==2.6
 ipaddress==1.0.17
